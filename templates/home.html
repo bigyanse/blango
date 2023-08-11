@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+		<header>
+			<h1 class="brand"><a href="/">Blango</a></h1>
+		</header>
+		<main>
+			<h2>Articles</h2>
+			<div class="posts">
+				{% for post in post_list %}
+					<div class="post">
+						<h3><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h3>
+						<span><small>{{ post.author }}</small></span>
+						<p>{{ post.body }}</p>
+					</div>
+				{% endfor %}
+			</div>
+		</main>
+		<footer>
+			&copy; Blango 2023
+		</footer>
+{% endblock %}
