@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ post.title }} — Blango{% endblock %}
+{% block title %}New Blog Post — Blango{% endblock %}
 
 {% block content %}
 		<header>
@@ -8,11 +8,11 @@
       <a href="{% url 'post_create' %}">New Blog Post</a>
 		</header>
 		<main>
-			<div class="post">
-				<h1>{{ post.title }}</h2>
-				<span><small>{{ post.author }}</small></span>
-				<p>{{ post.body }}</p>
-			</div>
+      <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+      </form>
 		</main>
 		<footer>
 			&copy; Blango 2023

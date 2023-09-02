@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Blango - A Django Blogger</title>
-		<meta charset="UTF-8">
+    <title>{% block title %}Blango — A Django Blogger{% endblock %}</title>
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}?v={% now 'U' %}" rel="stylesheet">
 	</head>
 	<body>
 		{% block content %}{% endblock %}
