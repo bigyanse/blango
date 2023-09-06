@@ -3,18 +3,11 @@
 {% block title %}{{ post.title }} — Blango{% endblock %}
 
 {% block content %}
-		<header>
-			<span class="brand"><a href="/">Blango</a></span>
-      <a href="{% url 'post_create' %}">New Blog Post</a>
-		</header>
 		<main>
 			<div class="post">
-				<h1>{{ post.title }}</h2>
+				<h3>{{ post.title }}</h3>
 				<span><small>{{ post.author }}</small></span>
 				<p>{{ post.body }}</p>
 			</div>
 		</main>
-		<footer>
-			&copy; Blango 2023
-		</footer>
 {% endblock %}

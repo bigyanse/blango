@@ -3,10 +3,6 @@
 {% block title %}New Blog Post — Blango{% endblock %}
 
 {% block content %}
-		<header>
-			<span class="brand"><a href="/">Blango</a></span>
-      <a href="{% url 'post_create' %}">New Blog Post</a>
-		</header>
 		<main>
       <form action="" method="post">
         {% csrf_token %}
@@ -14,7 +10,4 @@
         <input type="submit" value="Save">
       </form>
 		</main>
-		<footer>
-			&copy; Blango 2023
-		</footer>
 {% endblock %}

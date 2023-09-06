@@ -3,10 +3,6 @@
 {% block title %}Blango — A Django Blogger{% endblock %}
 
 {% block content %}
-		<header>
-			<h1 class="brand"><a href="/">Blango</a></h1>
-      <a href="{% url 'post_create' %}">New Blog Post</a>
-		</header>
 		<main>
 			<h2>Articles</h2>
 			<div class="posts">
@@ -19,7 +15,4 @@
 				{% endfor %}
 			</div>
 		</main>
-		<footer>
-			&copy; Blango 2023
-		</footer>
 {% endblock %}
