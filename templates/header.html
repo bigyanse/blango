@@ -1,4 +1,10 @@
   <header>
     <h1 class="brand"><a href="/">Blango</a></h1>
-    <a href="{% url 'post_create' %}">+New Blog Post</a>
+    <div class="flex gap-10">
+      {% if user.is_authenticated %}
+        <p>Hi, {{ user.username }}!</p>
+        <a href="{% url 'post_create' %}">+New Blog Post</a>
+        <a href="{% url 'logout' %}">Logout</a>
+      {% endif %}
+    </div>
   </header>
