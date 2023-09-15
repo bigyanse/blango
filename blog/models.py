@@ -4,7 +4,7 @@ from django.urls import reverse
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    author = models.ForeignKey("auth.User", on_delete=models.CASCADE)
+    author = models.ForeignKey("accounts.User", on_delete=models.CASCADE)
     body = models.TextField()
 
     def get_absolute_url(self):
