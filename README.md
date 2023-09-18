@@ -3,10 +3,22 @@ A blog application based on Django.
 
 ## Installation and Usage
 
+This is for installing and using in development. If you want to deploy it, see [production](#production).
+
 - `git clone https://github.com/bigyanse/blango.git`
 - `cd blango`
+
+If you use `pipenv`,
+
 - `pipenv install`
 - `pipenv shell`
+- `python manage.py runserver`
+
+If you prefer, python's `venv`,
+
+- `python -m venv .env`
+- `source venv/bin/activate.fish` or choose one that fits your shell environment.
+- `python -m pip install -r requirements.txt`
 - `python manage.py runserver`
 
 ## Production
