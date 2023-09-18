@@ -9,7 +9,9 @@
 				<span><small>{{ post.author }}</small></span>
 				<p>{{ post.body }}</p>
 			</div>
-      <a href="{% url 'post_update' post.pk %}">+Edit Blog Post</a>
-      <a href="{% url 'post_delete' post.pk %}">+Delete Blog Post</a>
+      {% if user.is_authenticated and user == post.author %}
+        <a href="{% url 'post_update' post.pk %}">+Edit Blog Post</a>
+        <a href="{% url 'post_delete' post.pk %}">+Delete Blog Post</a>
+      {% endif %}
 		</main>
 {% endblock %}
