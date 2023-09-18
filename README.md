@@ -17,7 +17,7 @@ If you use `pipenv`,
 If you prefer, python's `venv`,
 
 - `python -m venv .env`
-- `source venv/bin/activate.fish` or choose one that fits your shell environment.
+- `source .env/bin/activate.fish` or choose one that fits your shell environment.
 - `python -m pip install -r requirements.txt`
 - `python manage.py runserver`
 
