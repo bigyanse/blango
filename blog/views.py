@@ -22,7 +22,7 @@ class BlogDetailView(DetailView):
 class BlogCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = "post_create.html"
-    fields = ["title", "author", "body"]
+    fields = ["title", "body"]
 
     def form_valid(self, form):
         form.instance.author = self.request.user
