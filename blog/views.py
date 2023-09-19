@@ -1,4 +1,5 @@
 from django.urls import reverse_lazy
+from django.shortcuts import redirect
 from django.views.generic import DetailView, ListView
 from django.contrib.auth.mixins import (
     LoginRequiredMixin,
@@ -6,7 +7,8 @@ from django.contrib.auth.mixins import (
 )
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-from blog.models import Post
+from blog.models import Post, Comment
+from blog.forms import CommentForm
 
 
 class BlogListView(ListView):
@@ -17,6 +19,25 @@ class BlogListView(ListView):
 class BlogDetailView(DetailView):
     model = Post
     template_name = "post_detail.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["comment_form"] = CommentForm()
+        return context
+
+    def post(self, request, *args, **kwargs):
+        post = self.get_object()
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.author = request.user
+            comment.post = post
+            comment.save()
+            return redirect("post_detail", pk=post.pk)
+        else:
+            context = self.get_context_data()
+            context["comment_form"] = form
+            return self.render_to_response(context)
 
 
 class BlogCreateView(LoginRequiredMixin, CreateView):
