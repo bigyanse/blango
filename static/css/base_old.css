@@ -1,0 +1,42 @@
+@font-face {
+	font-family: raleway;
+	src: url("/static/font/raleway/Raleway-Regular.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: raleway;
+	background-color: #efefef;
+}
+
+header {
+  display: flex;
+	padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+main {
+	padding: 10px 20px;
+}
+
+footer {
+	padding: 10px 20px;
+}
+
+.post {
+	padding: 10px 15px;
+	margin: 10px 0px;
+	border-radius: 20px;
+	background-color: #ffffff;
+}
