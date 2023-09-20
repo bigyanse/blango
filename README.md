@@ -3,6 +3,8 @@ A blog application based on Django.
 
 ## Prerequisites
 
+Checkout `package.json` and `requirements.txt` for current version of the packages below.
+
 - `Python`
 - `Django`
 - `Gunicorn`
@@ -46,3 +48,14 @@ In case, if you want to deploy this blog application to production by tweaking t
 - Run `pnpm build:style` or `npm run build:style` or `yarn build:style` for tailwindcss.
 - Run `python manage.py collectstatic`.
 - Now you can deploy it using `gunicorn core.wsgi`.
+
+## Contributing
+
+Your contribution would be highly appreciated. If you are new to open source, check out some [guides](#https://opensource.guide).
+
+Though it is highly susceptible to change, you can roughly follow this workflow for now:
+
+1) Fork this repository on GitHub.
+2) Clone your forked repository locally.
+3) Check [Installation and Usage](#installation-and-usage) for running it locally.
+4) Make your changes and push it to your fork. Please follow good commit naming [conventions](https://github.com/folke/devmoji#devmoji---list) or good branch naming conventions like `feature/some-feature` or `bugfix/some-bug-fix`.
