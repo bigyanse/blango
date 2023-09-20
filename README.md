@@ -51,11 +51,11 @@ In case, if you want to deploy this blog application to production by tweaking t
 
 ## Contributing
 
-Your contribution would be highly appreciated. If you are new to open source, check out some [guides](#https://opensource.guide).
+Your contribution would be highly appreciated. If you are new to open source, check out some [guides](https://opensource.guide).
 
 Though it is highly susceptible to change, you can roughly follow this workflow for now:
 
 1) Fork this repository on GitHub.
 2) Clone your forked repository locally.
 3) Check [Installation and Usage](#installation-and-usage) for running it locally.
-4) Make your changes and push it to your fork. Please follow good commit naming [conventions](https://github.com/folke/devmoji#devmoji---list) or good branch naming conventions like `feature/some-feature` or `bugfix/some-bug-fix`.
+4) Make your changes and push it to your fork. Please follow good commit naming [conventions](https://github.com/folke/devmoji#devmoji---list) or good branch naming conventions like `feature/some-feature`, `bugfix/some-bug-fix`.
